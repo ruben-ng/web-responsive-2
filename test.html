@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    
+    <style>
+      .home .content.active{
+        display: block;
+      }
+
+      .slider-navigation .nav-btn.active{
+        background: #E5B80B;
+        width: 36px;
+      }
+
+      .img-slide{
+        position: absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+        /* transform: translateX(0); */
+      }
+
+      .img-slide.active{
+        clip-path: circle(150% at 0 50%);
+        /* transform: translateY(-100); */
+        transition: 2s ease;
+        transition-property: clip-path;
+      }
+
+      @media (max-width: 1024px){
+        header .navigation.active{
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(1, 1, 1, 0.5);
+        }
+        /* .menu-btn.active{
+          z-index: 999;
+        } */
+      }
+    </style>
+    
+</head>
+<body class="bg-bslue-500 m-0 p-0 box-border font-poppins">
+
+  <header class="z-[999] absolute top-0 left-0 w-full flex justify-between items-center py-[15px] px-[200px] transition duration-500 ease-in-out lg:py-[12px] lg:px-[20px]">
+    <div class="brand logo flex items-center text-[#fff] font-bold text-2xl uppercase">
+      <img src="./assets/icons/logo.svg" alt="logo">
+      <h1>Yusra</h1>
+    </div>
+    <div class="menu-btn lg:bg-[30px] lg:bg-center lg:transition lg:duration-300 lg:ease-in-out">
+      <div class="hidden lg:focus:block">
+        <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+      </div>
+      <div class="hidden lg:block">
+        <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+      </div>
+      <div class="navigation active relative lg:invisible">
+        <div class="navigation-items lg:bg-[#fff] lg:w-[600px] lg:m-[20px] lg:p-[40px] lg:flex lg:flex-col lg:items-center lg:rounded-[5px]">
+          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Home</a>  
+          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">About us</a>  
+          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Services</a>  
+          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Projects</a>  
+          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Contact us</a>  
+        </div> <!-- Navigation items-->
+      </div> <!-- Navigation-->
+    </div> <!-- Menu button-->
+  </header>
+
+  <section class="home bg-slate-400 relative w-full min-h-screen flex flex-col justify-center py-[100px] px-[200px] lg:py-[100px] lg:px-[20px] bg-blue-500
+                  before:z-[777] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-blue-500
+  ">
+    <img src="./assets/img/1.webp" alt="" class="img-slide active z-[888] absolute top-0 left-0 w-full h-full object-cover">
+    <img src="./assets/img/2.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
+    <img src="./assets/img/3.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
+
+    <div class="content active bg-yellow-400 z-[888] text-[#fff] w-full mt-[50px] hidden">
+      <p class="text-2xl font-black uppercase tracking-wide flex justify-center">Logistic Partner</p>
+    </div>
+    <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
+      <p class="text-2xl font-black uppercase tracking-wide flex justify-center">Document Agency Partner</p>
+    </div>
+    <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
+      <p class="text-2xl font-black uppercase tracking-wide flex justify-center">Information Technology Partner</p>
+    </div>
+
+    <div class="slider-navigation bg-black z-[888] relative flex justify-center itemss-center translate-y-[80px] mb-[12px] spacssse-x-5">
+      <span class="nav-btn active w-[12px] h-[12px] bg-[#fff] rounded-full cursor-pointer shadow-lg transition duration-2000 m-[20px] hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[12px] bg-[#fff] rounded-full cursor-pointer shadow-lg transition duration-2000 m-[20px] hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[12px] bg-[#fff] rounded-full cursor-pointer shadow-lg transition duration-2000 m-[20px] hover:scale-[1.2]"></span>
+    </div>
+  </section>
+
+
+  <section class="About bg-white py-[50px] px-[100px]">
+    <div class="judul">
+      <h2 class="font-semibold text-3xl text-[#353839]">About us</h2>
+      <h1 class="text-[#D9B01C] text-6xl font-bold border-b-[2px] w-1/2">Who we are</h1>
+      <p class="text-base text-[#353839]">Customer satisfaction is our top most priority</p>
+    </div>
+    <div class="content-about">
+      <div class="img-about bg-blacsk w-full flex relative">
+        <div class="aksen absolutse h-full w-[100px] bg-[#D9B01C] z-20"></div>
+        <div class="z-max">
+          <img src="./assets/img/ship.webp" alt="" class="msl-[5%] w-[500px]">
+        </div>
+        <p class="w-1/2">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
+          Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
+          services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
+        </p>
+      </div>
+  
+      <div class="p-about w-1s/2 flex">
+        <div class="wrapper-text">
+          <h2 class="text-[#D9B01C]">Vision</h2>
+          <p>Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
+        </div>
+        <div class="wrapper-text">
+          <h2 class="text-[#D9B01C]">Mision</h2>
+          <p>Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
+        </div>
+        
+    </div>
+  </section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
