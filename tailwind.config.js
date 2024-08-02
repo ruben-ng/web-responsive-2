@@ -13,6 +13,20 @@ module.exports = {
     },
 
     extend: {
+      boxShadow: {
+        // 0 3px -> posisi, 18px -> blur, 5px -> spread
+        'img-container': '0 3px 18px 5px rgb(0, 0, 0, 30%)',
+        'cht-container': '0 2px 10px 2px rgb(0, 0, 0, 30%)',
+      },
+      animation: {
+        'infinite-scroll': 'infiniteScrolls 20s linear infinite',
+      },
+      keyframes: {
+        'infiniteScrolls': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+      }
     },
   },
   plugins: [],

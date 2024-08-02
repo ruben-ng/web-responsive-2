@@ -35,6 +35,10 @@
         transition-property: clip-path;
       }
 
+      .logo-container{
+        overflow: hidden;
+      }
+
       @media (max-width: 1024px){
         header .navigation.active{
           position: fixed;
@@ -56,36 +60,42 @@
 </head>
 <body class="bg-bslue-500 m-0 p-0 box-border font-poppins">
 
-  <header class="z-[999] absolute top-0 left-0 w-full flex justify-between items-center py-[15px] px-[200px] transition duration-500 ease-in-out lg:py-[12px] lg:px-[20px]">
-    <div class="brand logo flex items-center text-[#fff] font-bold text-2xl uppercase">
-      <img src="./assets/icons/logo.svg" alt="logo">
-      <h1>Yusra</h1>
-    </div>
-    <div class="menu-btn lg:bg-[30px] lg:bg-center lg:transition lg:duration-300 lg:ease-in-out">
-      <div class="hidden lg:focus:block">
-        <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+  <header class="z-[999] absolute top-0 left-0 w-full py-[15px] px-[100px] lg:py-[12px] lg:px-[20px]">
+    <nav class="border-b-[2px] flex justify-between items-center transition duration-500 ease-in-out">
+      <div class="brand flex items-center text-[#fff] font-bold text-2xl uppercase">
+        <img src="./assets/icons/logo.svg" alt="logo" class="w-[35%]">
+        <h1 class="text-[#D9B01C] ml-2">Yusra</h1>
       </div>
-      <div class="hidden lg:block">
-        <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
-      </div>
-      <div class="navigation active relative lg:invisible">
-        <div class="navigation-items lg:bg-[#fff] lg:w-[600px] lg:m-[20px] lg:p-[40px] lg:flex lg:flex-col lg:items-center lg:rounded-[5px]">
-          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Home</a>  
-          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">About us</a>  
-          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Services</a>  
-          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Projects</a>  
-          <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Contact us</a>  
-        </div> <!-- Navigation items-->
-      </div> <!-- Navigation-->
-    </div> <!-- Menu button-->
+      <div class="menu-btn lg:bg-[30px] lg:bg-centers lg:transition lg:duration-300 lg:ease-in-out">
+        <div class="hidden lg:focus:block">
+          <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+        </div>
+        <div class="hidden lg:block">
+          <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+        </div>
+        <div class="navigation active relative lg:invisible ">
+          <div class="navigation-items lg:bg-[#fff] lg:w-[600px] lg:m-[20px] lg:p-[40px] lg:flex lg:flex-col lg:items-center lg:rounded-[5px]">
+            <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Home</a>  
+            <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">About us</a>  
+            <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Services</a>  
+            <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Projects</a>  
+            <a href="#" class="relative lg: lg:text-2xl lg:m-[20px] lg:before:bg-[#222] lg:before:h-[5px] text-[#fff] font-medium no-underline ml-[30px] transition duration-300 ease-in-out before:absolute before:bg-[#fff] before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:duration-300 before:ease-in-out hover:bg-black">Contact us</a>  
+          </div> <!-- Navigation items-->
+        </div> <!-- Navigation-->
+      </div> <!-- Menu button-->
+    </nav>
   </header>
 
-  <section class="home bg-slate-400 relative w-full min-h-screen flex flex-col justify-center py-[100px] px-[200px] lg:py-[100px] lg:px-[20px] bg-blue-500
+  <!-- Home Page -->
+  <section class="home relative w-full min-h-screen flex flex-col justify-center py-[50px] px-[100px] lg:py-[100px] lg:px-[20px] bg-blue-500
                   before:z-[777] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-blue-500
   ">
+  
     <img src="./assets/img/1.webp" alt="" class="img-slide active z-[888] absolute top-0 left-0 w-full h-full object-cover">
     <img src="./assets/img/2.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
     <img src="./assets/img/3.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
+
+    <div class="overlay absolute top-0 left-0 w-full h-full bg-black opacity-40 z-[888]"></div>
 
     <div class="content active bg-yellow-400 z-[888] text-[#fff] w-full mt-[50px] hidden">
       <p class="text-2xl font-black uppercase tracking-wide flex justify-center">Logistic Partner</p>
@@ -104,43 +114,185 @@
     </div>
   </section>
 
-
-  <section class="About bg-white py-[50px] px-[100px]">
-    <div class="judul">
+  <!-- About Page -->
+  <section class="About bg-white py-[50px] px-[200px]">
+    <div class="judul mb-6">
       <h2 class="font-semibold text-3xl text-[#353839]">About us</h2>
       <h1 class="text-[#D9B01C] text-6xl font-bold border-b-[2px] w-1/2">Who we are</h1>
       <p class="text-base text-[#353839]">Customer satisfaction is our top most priority</p>
     </div>
+
     <div class="content-about">
-      <div class="img-about bg-blacsk w-full flex relative">
-        <div class="aksen absolutse h-full w-[100px] bg-[#D9B01C] z-20"></div>
-        <div class="z-max">
-          <img src="./assets/img/ship.webp" alt="" class="msl-[5%] w-[500px]">
+      <div class=" w-full flex items-censter gap-10 mb-6"> <!-- Container image about-->
+        <div class="img-about w-1/2 relative h-[400px]">
+          <div class="aksen absolute h-full w-[100px] left-0 bg-[#D9B01C] rounded-xl"></div>
+          <div class="relative w-full h-full flex items-center pl-10 bg-slsate-500 ">
+            <img src="./assets/img/ship.webp" alt="" class="w-full h-[90%] rounded-xl drop-shadow-lg">
+          </div>
         </div>
-        <p class="w-1/2">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
+        <p class="w-1/2 text-pretty text-base leading-relaxed tracking-wide text-[#353839] text-justify">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
           Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
           services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
         </p>
       </div>
   
-      <div class="p-about w-1s/2 flex">
-        <div class="wrapper-text">
-          <h2 class="text-[#D9B01C]">Vision</h2>
-          <p>Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
+      <div class="p-about flex text-justify">
+        <div class="wrapper-text px-4 ">
+          <h2 class="text-[#D9B01C] text-3xl font-semibold">Vision</h2>
+          <p class="text-[#353839] text-base">Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
         </div>
-        <div class="wrapper-text">
-          <h2 class="text-[#D9B01C]">Mision</h2>
-          <p>Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
+        <div class="wrapper-text px-4">
+          <h2 class="text-[#D9B01C] text-3xl font-semibold">Mission</h2>
+          <p class="text-[#353839] text-base">Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
         </div>
         
     </div>
   </section>
 
+  <!-- Service Page -->
+  <section class="bg-[#090909] py-[50px] px-[200px]">
+    <!-- Judul Text -->
+    <div class="flex justify-center text-6xl tracking-wide">
+      <h2 class="text-[#FFFFF0] font-light">OUR<span class="text-[#D4AF37]  font-semibold ml-3">SERVICE</span></h2> 
+    </div>
 
+    <!-- Container Our Service -->
+    <div class="flex flex-col gap-5">
+      <!-- Content Our Service -->
+      <!-- service 1 -->
+      <div class="flex bg-[#1C1C1C] p-3 rounded-xl">
+        <div class=" w-1/2 flex items-center justify-center">
+          <img src="./assets/img/doc-2.webp" alt="" class="max-h-[300px] rounded-md">
+        </div>
+        <div class="text-white w-1/2 text-center">
+          <h2 class="font-semibold text-xl uppercase">Documents Agency</h2>
+          <p class="text-justify font-normal text-sm tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.             
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+          </p>
+          <div class="flex justify-center">
+            <h3 class="font-semibold bg-[#D9B01C] text-[#333333] rounded-lg py-2 px-3 cursor-pointer hover:bg-white hover:opacity-80">View more<i class="fa-solid fa-arrow-up ml-1 rotate-45 hover:transition hover:scale-105"></i></h3>
+          </div>
+        </div>
+      </div>
 
+      <!-- service 2 -->
+      <div class="flex bg-[#1C1C1C] p-5 rounded-xl">
+        <div class="text-white w-1/2 text-center">
+          <h2 class="font-semibold text-xl uppercase">Logistics</h2>
+          <p class="text-justify font-normal text-sm tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.             
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+          </p>
+          <div class="flex justify-center">
+            <h3 class="font-semibold bg-[#D9B01C] text-[#333333] rounded-lg py-2 px-3 cursor-pointer hover:bg-white hover:opacity-80">View more<i class="fa-solid fa-arrow-up ml-1 rotate-45 hover:transition hover:scale-105"></i></h3>
+          </div>
+        </div>
+        <div class=" w-1/2 flex items-center justify-center">
+          <img src="./assets/img/contrail-ocean-ship-carrying-container-1300x1300.webp" alt="" class="max-h-[380px] rounded-md">
+        </div>
+      </div>
 
+      <!-- service 3 -->
+      <div class="flex bg-[#1C1C1C] p-3 rounded-xl">
+        <div class=" w-1/2 flex items-center justify-center">
+          <img src="./assets/img/it-3.webp" alt="" class="max-h-[380px] rounded-md">
+        </div> 
+        <div class="text-white w-1/2 text-center">
+          <h2 class="font-semibold text-xl uppercase">Information Technology</h2>
+          <p class="text-justify font-normal text-sm tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.             
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+          </p>
+          <div class="flex justify-center">
+            <h3 class="font-semibold bg-[#D9B01C] text-[#333333] rounded-lg py-2 px-3 cursor-pointer hover:bg-white hover:opacity-80">View more<i class="fa-solid fa-arrow-up ml-1 rotate-45 hover:transition hover:scale-105"></i></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Page -->
+  <section class=" bg-white pt-4">
+    <div class="text-center">
+      <h2 class="font-normal text-6xl tracking-tight">Our<span class="text-6xl font-bold ml-3 tracking-wide text-[#D9B01C]">Clients</span></h2>
+      <p class="font-medium text-2xl tracking-widest">Pleasure to work with</p>
+    </div>
+
+    <div class="logo-container flex">
+      <div class="logo flex shrink-0 gap-[5rem] items-center animate-infinite-scroll ">
+        <img src="./assets/clients/Cladtek Arabia-Photoroom.png" alt="" class="max-w-52">
+        <img src="./assets/clients/asia_limited_2.png" alt="" class="max-w-52">
+        <img src="./assets/clients/caterpillar-2.svg" alt="" class="max-w-52">
+        <img src="./assets/clients/ccn.png" alt="" class="max-w-52">
+        <img src="./assets/clients/f748d3e0-8899-4adc-b8b4-b403012cb08f.webp" alt="" class="max-w-52">
+        <img src="./assets/clients/Fagioli_LOGO_sfumatura_lato prova.webp" alt="" class="max-w-sm">
+        <img src="./assets/clients/icon-proTeknik.png" alt="" class="max-w-52">
+        <img src="./assets/clients/image 7.png" alt="" class="max-w-52">
+        <img src="./assets/clients/images.webp" alt="" class="max-w-52">
+        <img src="./assets/clients/logo-site@2x.png" alt="" class="max-w-52">
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Page -->
+  <section class="Projects bg-[#090909] py-[50px] px-[200px]">
+    <div class="flex flex-col">
+      <h1 class=" font-semibold text-2xl text-[#D9B01C]">Projects</h1>
+      <span class="w-[40%] h-[2px] bg-[#D9B01C]"></span>
+    </div>
+
+  </section>
+
+  <!-- Review Page -->
+  <section class="bg-white">
+    <div class=""><h2>s</h2></div>
+  </section>
+
+  <!-- Chat Button -->
+  <aside id="popup_trigger" class=" bg-[#D9B01C] fixed z-30 bottom-5 right-10 p-3 rounded-full shadow-lg hover:scale-105 duration-300  cursor-pointer hover:bg-blue-500">
+    <img src="assets/icons/chat 1.png" alt="icon-chat" class="">
+  </aside>
+  <aside id="popup_container" class="fixed bottom-24 right-10 hidden">
+      <div class="grid">
+          <div class="bg-white text-black text-sm font-semibold font-sans tracking-wide rounded-lg py-2">
+              <a href="mailto:rubenkece2@gmail.com" target="_blank" class="flex items-center gap-2 pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+                  <img src="assets/icons/gmail-cht.png" alt="email">
+                  <span class="">Email</span>
+              </a>
+              <a href="https://www.instagram.com/rubenbkr_/" target="_blank" class="flex items-center gap-2 pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+                  <img src="assets/icons/instagram-cht.png" alt="instagram">
+                  <span class="">Instagram</span>
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=62811388874" target="_blank" class="flex items-center gap-2 pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+                  <img src="assets/icons/whatsapp-cht.png" alt="whatsapp">
+                  <span class="">Whatsapp</span>
+              </a>
+          </div>
+          <span class="place-self-end mr-5 w-0 h-0 border-solid border-l-[10px] border-l-transparent border-t-[15px] border-t-white border-r-[10px] border-r-transparent border-shadow-cht-container"></span>
+      </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="bg-black px-60 pt-20 space-y-20 font-sans">
+    <div class="items-center justify-center flex flex-wrap text-[#FFDD43] gap-5">
+        <img src="assets/icons/logo.png" alt="Logo" class="cursor-pointer">
+        <span class="cursor-pointer text-pretty font-semibold text-4xl tracking-widest">YUSRA</span>
+    </div>
+    <div class="flex justify-around text-white font-medium tracking-wider text-2xl">
+        <span class="">DOCUMENTS AGENCY</span>
+        <span>LOGISTICS</span>
+        <span>INFORMATION TECHNOLOGY</span>
+    </div>
+    <div class=" flex gap-20 justify-center items-center">
+        <span class="rounded-full p-4 bg-slate-50"><img src="assets/icons/instagram.png" alt="icon-ig"></span>
+        <span class="rounded-full p-4 bg-slate-50"><img src="assets/icons/email.png" alt="icon-email"></span>
+        <span class="rounded-full p-4 bg-slate-50"><img src="assets/icons/whatsapp.png" alt="icon-whatsapp"></span>
+    </div>
+    <div class="text-center text-white font-light tracking-wider text-lg">
+        &copy; 2024 Document Agency. All rights reserved.
+    </div>
+  </footer>
+  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js.js"></script>
 </body>
 </html>

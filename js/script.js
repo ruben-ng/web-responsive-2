@@ -26,6 +26,11 @@ btns.forEach((btn, i)=>{
     });
 });
 
+
+// Auto animate scroll
+const logo = document.querySelector(".logo").cloneNode(true);
+
+document.querySelector(".logo-container").appendChild(logo);
     
     document.addEventListener('DOMContentLoaded', function () {
         const trigger = document.getElementById('popup_trigger');
@@ -42,4 +47,3 @@ btns.forEach((btn, i)=>{
             }
         });
     });
-
