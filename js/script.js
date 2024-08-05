@@ -1,8 +1,11 @@
+
+// Scroll Hero page
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".img-slide");
 const slide = document.querySelectorAll(".content");
 const contents = document.querySelectorAll(".content");
 
+let currentIndex = 0;
 
 var sliderNav = function(manual){
     btns.forEach((btn) =>{
@@ -26,12 +29,22 @@ btns.forEach((btn, i)=>{
     });
 });
 
+const autoSlide = () => {
+    currentIndex = (currentIndex + 1) % btns.length; 
+    sliderNav(currentIndex);
+}
+
+setInterval(autoSlide, 5000);
+
+
 
 // Auto animate scroll
 const logo = document.querySelector(".logo").cloneNode(true);
 
 document.querySelector(".logo-container").appendChild(logo);
-    
+
+
+// Button chat
     document.addEventListener('DOMContentLoaded', function () {
         const trigger = document.getElementById('popup_trigger');
         const container = document.getElementById('popup_container');
