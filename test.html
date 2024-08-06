@@ -71,12 +71,18 @@
         overflow: hidden;
       }
 
-      /*.swiper-slide{
-        display: flex;
-        justify-content: center;
+
+      .swiper{
+        width: 100%;
+        height: 100%;
       }
 
-      .swiper-slide img{
+      .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /*.swiper-slide img{
         display: block;
       }*/
 
@@ -94,11 +100,17 @@
         header .navigation.active{
           position: fixed;
           width: 100%;
-          height:;
+          /* height:; */
           top: 50px;
           left: 0;
           background: rgba(1, 1, 1, 0.5);
           border-radius: 15px;
+        } 
+        .swiper{
+          height: 1000px;
+        }
+        .swiper-button-next, .swiper-button-prev{
+          display: none;
         }
       }
     </style>
@@ -279,14 +291,14 @@
   </section> -->
 
   <!-- Project Page -->
-  <section id="project" class="Projects bg-[#090909] py-[50px] px-[200px] lg:py-[100px] lg:px-[20px]">
+  <!-- <section id="project" class="Projects bg-[#090909] py-[50px] px-[200px] lg:py-[100px] lg:px-[20px] lg:flex lg:flex-row">
     <div class="flex flex-col mb-5">
       <h1 class="font-semibold text-4xl text-[#D9B01C] uppercase tracking-wide">Projects</h1>
       <span class="w-[7%] h-[2px] bg-[#D9B01C]"></span>
     </div>
-    <div class="container-project swiper">
+    <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide text-center">
           <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
             <img src="./assets/img/1.png" alt="" class="w-full h-auto">
             <div class="absolute inset-0 bg-black opacity-40"></div>
@@ -321,27 +333,7 @@
         </div>
         <div class="swiper-slide">
           <div class="relative text-white w-[300px] max-h-[400px]">
-            <img src="./assets/img/4.png" alt="" class="w-full h-auto">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="absolute bottom-0 text-white px-3 py-2">
-              <h2 class="font-bold text-xl mb-2">Forwarding Agency</h2>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="relative text-white w-[300px] max-h-[400px]">
-            <img src="./assets/img/1.png" alt="" class="w-full h-auto">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="absolute bottom-0 text-white px-3 py-2">
-              <h2 class="font-bold text-xl mb-2">Forwarding Agency</h2>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="relative text-white w-[300px] max-h-[400px]">
-            <img src="./assets/img/1.png" alt="" class="w-full h-auto">
+            <img src="./assets/img/3.png" alt="" class="w-full h-auto">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="absolute bottom-0 text-white px-3 py-2">
               <h2 class="font-bold text-xl mb-2">Forwarding Agency</h2>
@@ -352,43 +344,44 @@
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <div class="swiper-scrollbar"></div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Review Page -->
   <!-- <section id="review" class="bg-[#F6F6F9] py-[50px]">
     <h2 class="uppercase text-4xl text-center text-[#D9B01C] font-bold mb-4">Reviews</h2>
     <div class="container-reviews scroll-bar overflow-x-auto py-3">
       <div class="wrapper-reviews flex space-x-4">
-        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[280px] flex-shrink-0 p-4 relative">
+        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
           <span class="text-3xl"><i class="fa-solid fa-quote-left fa-2xl absolute left-32 top-7 opacity-10 -rotate-[30deg]"></i></span>
           <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">"Kami telah bekerja dengan PT Yusra Bintang Jasa selama lebih dari setahun, dan hasilnya selalu luar biasa. 
               Tim mereka sangat profesional dan mampu memenuhi semua kebutuhan kami dengan kecepatan dan efisiensi yang mengesankan.
               Mereka benar-benar menjadi mitra kami dalam setiap proyek."</p>
           <h3 class="font-bold text-xl text-gray-800">Sarah W. – CEO <br><span class="text-base text-[#5E7087] font-medium">BrightTech Solutions</span></h3>
         </div>
-        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[280px] flex-shrink-0 p-4 relative">
+        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
           <span class="text-3xl"><i class="fa-solid fa-quote-left fa-2xl absolute left-32 top-7 opacity-10 -rotate-[30deg]"></i></span>
           <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">"Kami telah bekerja dengan PT Yusra Bintang Jasa selama lebih dari setahun, dan hasilnya selalu luar biasa. 
               Tim mereka sangat profesional dan mampu memenuhi semua kebutuhan kami dengan kecepatan dan efisiensi yang mengesankan.
               Mereka benar-benar menjadi mitra kami dalam setiap proyek."</p>
           <h3 class="font-bold text-xl text-gray-800">Sarah W. – CEO <br><span class="text-base text-[#5E7087] font-medium">BrightTech Solutions</span></h3>
         </div>
-        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[280px] flex-shrink-0 p-4 relative">
+        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
           <span class="text-3xl"><i class="fa-solid fa-quote-left fa-2xl absolute left-32 top-7 opacity-10 -rotate-[30deg]"></i></span>
           <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">"Kami telah bekerja dengan PT Yusra Bintang Jasa selama lebih dari setahun, dan hasilnya selalu luar biasa. 
               Tim mereka sangat profesional dan mampu memenuhi semua kebutuhan kami dengan kecepatan dan efisiensi yang mengesankan.
               Mereka benar-benar menjadi mitra kami dalam setiap proyek."</p>
           <h3 class="font-bold text-xl text-gray-800">Sarah W. – CEO <br><span class="text-base text-[#5E7087] font-medium">BrightTech Solutions</span></h3>
         </div>
-        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[280px] flex-shrink-0 p-4 relative">
+        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
           <span class="text-3xl"><i class="fa-solid fa-quote-left fa-2xl absolute left-32 top-7 opacity-10 -rotate-[30deg]"></i></span>
           <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">"Kami telah bekerja dengan PT Yusra Bintang Jasa selama lebih dari setahun, dan hasilnya selalu luar biasa. 
               Tim mereka sangat profesional dan mampu memenuhi semua kebutuhan kami dengan kecepatan dan efisiensi yang mengesankan.
               Mereka benar-benar menjadi mitra kami dalam setiap proyek."</p>
           <h3 class="font-bold text-xl text-gray-800">Sarah W. – CEO <br><span class="text-base text-[#5E7087] font-medium">BrightTech Solutions</span></h3>
         </div>
-        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[280px] flex-shrink-0 p-4 relative">
+        <div class="slide-reviews bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
           <span class="text-3xl"><i class="fa-solid fa-quote-left fa-2xl absolute left-32 top-7 opacity-10 -rotate-[30deg]"></i></span>
           <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">"Kami telah bekerja dengan PT Yusra Bintang Jasa selama lebih dari setahun, dan hasilnya selalu luar biasa. 
               Tim mereka sangat profesional dan mampu memenuhi semua kebutuhan kami dengan kecepatan dan efisiensi yang mengesankan.
@@ -453,8 +446,9 @@
   <script src="js.js"></script>
   <script>
     var swiper = new Swiper('.swiper', {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 10,
+      direction: 'horizontal',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -466,9 +460,18 @@
       breakpoints: {
         1024: {
           slidesPerView: 3,
+          spaceBetween:10,
+          direction: 'horizontal',
         },
-        640: {
+        360: {
+          direction: 'vertical',
           slidesPerView: 2,
+          // spaceBetween:20,
+          scrollbar:{
+            el: '.swiper-scrollbar',
+          },
+          mousewheel:true,
+          // loop:false,
         },
       },
     });
