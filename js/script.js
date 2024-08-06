@@ -25,16 +25,17 @@ var sliderNav = function(manual){
 
 btns.forEach((btn, i)=>{
     btn.addEventListener("click", ()=>{
-        sliderNav(i) 
+        sliderNav(i);
     });
 });
 
 const autoSlide = () => {
     currentIndex = (currentIndex + 1) % btns.length; 
     sliderNav(currentIndex);
+    console.log(currentIndex);
 }
 
-setInterval(autoSlide, 5000);
+setInterval(autoSlide, 6000);
 
 
 

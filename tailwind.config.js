@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     screens: {
       'lg': {'max': '1040px'},
+      'min-desktop': '1080',
     },
 
     extend: {
@@ -22,7 +23,7 @@ module.exports = {
         'triangle': '0 4px 6px rgba(0, 0, 0, 0.2)',
       },
       animation: {
-        'infinite-scroll': 'infiniteScrolls 100s linear infinite',
+        'infinite-scroll': 'infiniteScrolls 15s linear infinite',
       },
       keyframes: {
         'infiniteScrolls': {
