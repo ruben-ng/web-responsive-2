@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        bebas: ['Bebas Neue', 'sans-serif'],
       },
       boxShadow: {
         // 0 3px -> posisi, 18px -> blur, 5px -> spread

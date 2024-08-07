@@ -50,6 +50,7 @@
       .slider-navigation .nav-btn.active{
         background: #E5B80B;
         width: 25px;
+        opacity: 100%;
       }
 
       .img-slide{
@@ -61,8 +62,6 @@
 
       .img-slide.active{
         clip-path: circle(150% at 0 50%);
-        /*clip-path: inset(0 0 0 0);*/
-        /*transform: translateX(-100%);*/
         transition: 2s ease;
         transition-property: clip-path;
       }
@@ -70,7 +69,6 @@
       .logo-container{
         overflow: hidden;
       }
-
 
       .swiper{
         width: 100%;
@@ -82,10 +80,21 @@
         justify-content: center;
         align-items: center;
       }
-      /*.swiper-slide img{
-        display: block;
-      }*/
 
+      .swiper-pagination-bullet {
+        background: #5E7087; 
+        width: 12px; 
+        height: 12px; 
+        border-radius: 50%; 
+        opacity: 1; 
+        transition: background 0.3s, width 0.3s;
+      }
+      .swiper-pagination-bullet-active {
+        background: #D9B01C; 
+      }
+      .swiper-pagination-bullet:hover {
+        background: #D9B01C; 
+      }
         @layer utilities {
             .scroll-bar::-webkit-scrollbar{
                 display: none;
@@ -142,8 +151,8 @@
   </header>
 
   <!-- Home Page -->
-  <section id="home" class="home relative w-screen min-h-screen flex flex-col justify-center py-[50px] px-[100px] lg:py-[100px] lg:px-[20px] bg-[#090909]
-                  before:z-[777] before:absolute before:w-screen before:h-screen before:top-0 before:left-0 before:bg-[#090909]
+  <section id="home" class="home relative w-full min-h-screen flex flex-col justify-center py-[50px] px-[100px] lg:py-[100px] lg:px-[20px] bg-[#090909]
+                  before:z-[777] before:absolute before:w-full before:h-screen before:top-0 before:left-0 before:bg-[#090909]
   ">
   
     <img src="./assets/img/2.webp" alt="" class="img-slide active z-[888] absolute top-0 left-0 w-full h-full object-cover">
@@ -162,10 +171,10 @@
       <p class="text-6xl lg:text-3xl bg-slate-700 uppercase tracking-widest font-inter font-bold flex justify-center">Document Agency Partner</p>
     </div>
 
-    <div class="slider-navigation flex justify-center w-full bg-slate-600 bottom-20 z-[888] translate-y-[80px] mb-[12px] space-x-2">
-      <span class="nav-btn active w-[12px] h-[8px] bg-slate-300 opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear m-[2s0px] hover:scale-[1.2]"></span>
-      <span class="nav-btn w-[12px] h-[8px] bg-slate-300 opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear m-[2s0px] hover:scale-[1.2]"></span>
-      <span class="nav-btn w-[12px] h-[8px] bg-slate-300 opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear m-[2s0px] hover:scale-[1.2]"></span>
+    <div class="slider-navigation flex justify-center w-full bottom-20 z-[888] translate-y-[80px] mb-[12px] space-x-2">
+      <span class="nav-btn active w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
     </div>
   </section>
 
@@ -291,53 +300,53 @@
   </section> -->
 
   <!-- Project Page -->
-  <!-- <section id="project" class="Projects bg-[#090909] py-[50px] px-[200px] lg:py-[100px] lg:px-[20px] lg:flex lg:flex-row">
+  <section id="project" class="Projects bg-[#090909] py-[50px] px-[200px] lg:py-[100px] lg:px-[20px] lg:flex lg:flex-row">
     <div class="flex flex-col mb-5">
       <h1 class="font-semibold text-4xl text-[#D9B01C] uppercase tracking-wide">Projects</h1>
       <span class="w-[7%] h-[2px] bg-[#D9B01C]"></span>
     </div>
-    <div class="swiper">
+    <div class="swiper project-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide text-center">
           <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
-            <img src="./assets/img/1.png" alt="" class="w-full h-auto">
-            <div class="absolute inset-0 bg-black opacity-40"></div>
-            <div class="absolute bottom-0 text-white px-3 py-2 bg-black opacity-70 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              <h2 class="font-bold text-xl mb-2">Forwarding Agency</h2>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <img src="./assets/img/img-project-1.png" alt="" class="w-full h-auto rounded-xl">
+            <div class="absolute h-0 bottom-0 left-0 text-white px-3 py-2 bg-gradient-to-t from-black to-transparent transition-all duration-500 group-hover:h-full ">
+              <div class="flex flex-col justify-end inset-0">
+                <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
+                <p class="text-sm">Compass Energy Pte Ltd - 2021</p>
+                <p class="text-sm">Base Move All Equipment from KTU Sekupang Yars to Bluerock Yard Batu Ampar</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
-            <img src="./assets/img/2.png" alt="" class="w-full h-auto">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="absolute bottom-0 text-white px-3 py-2 transition-transform duration-300 transform translate-y-0 group-hover:translate-y-[-40px] group-hover:bg-black group-hover:opacity-50">
-              <h2 class="font-bold text-xl mb-2">Forwarding Agency</h2>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-slate-500 text-white p-2 rounded-full cursor-pointer z-10">
-              Button
-            </span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="relative text-white w-[300px] max-h-[400px]">
-            <img src="./assets/img/3.png" alt="" class="w-full h-auto">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="absolute bottom-0 text-white px-3 py-2">
-              <h2 class="font-bold text-xl mb-2">Forwarding Agency</h2>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <img src="./assets/img/img-project-2.png" alt="" class="w-full h-auto">
+            <!-- <div class="absolute inset-0 bg-black opacity-50"></div> -->
+            <div class="absolute bottom-0 text-white px-3 py-2 bg-black transition-all duration-500 translate-y-1/2 group-hover:translate-y-0 ">
+              <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
+              <p class="text-sm">Shipment Black Mamba from Africa to Singapore, Singapore to Batam, Year 2021</p>
+              <button class="bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
             </div>
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="relative text-white w-[300px] max-h-[400px]">
-            <img src="./assets/img/3.png" alt="" class="w-full h-auto">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="absolute bottom-0 text-white px-3 py-2">
-              <h2 class="font-bold text-xl mb-2">Forwarding Agency</h2>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
+            <img src="./assets/img/img-project-3.png" alt="" class="w-full h-auto">
+            <!-- <div class="absolute inset-0 bg-black opacity-50"></div> -->
+            <div class="absolute bottom-0 text-white px-3 py-2 bg-black transition-all duration-500 translate-y-1/2 group-hover:translate-y-0">
+              <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Documents Handling</h2>
+              <p class="text-sm">jetty special terminal permit processing PT. Caterpillar</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
+            <img src="./assets/img/img-project-4.png" alt="" class="w-full h-auto">
+            <!-- <div class="absolute inset-0 bg-black opacity-50"></div> -->
+            <div class="absolute bottom-0 text-white px-3 py-2 bg-black transition-all duration-500 translate-y-1/2 group-hover:translate-y-0">
+              <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
+              <p class="text-sm">Shipment galvanize bamboo wooden beam from India to Batam ,and Batam to Bogor – PT Ecomat Pro</p>
             </div>
           </div>
         </div>
@@ -346,7 +355,63 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-scrollbar"></div>
     </div>
-  </section> -->
+  </section>
+
+  <!-- review -->
+  <section id="review" class="bsg-[#F6F6F9] py-[50px] px-[100px] bg-[#000000]">
+    <h2 class="uppercase text-4xl text-center text-[#D9B01C] font-bold mb-4 tracking-wider">Reviews</h2>
+    <div class="swiper review-swiper">
+        <div class="swiper-wrapper mb-8">
+            <div class="swiper-slide flex flex-col bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
+                <span class="text-3xl">
+                    <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+                </span>
+                <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                    "Kami telah bekerja dengan PT Yusra Bintang Jasa selama lebih dari setahun, dan hasilnya selalu luar biasa.
+                    Tim mereka sangat profesional dan mampu memenuhi semua kebutuhan kami dengan kecepatan dan efisiensi yang mengesankan.
+                    Mereka benar-benar menjadi mitra kami dalam setiap proyek."
+                </p>
+                <h3 class="font-bold text-xl text-gray-800">
+                    Sarah W. – CEO
+                    <br>
+                    <span class="text-base text-[#5E7087] font-medium">BrightTech Solutions</span>
+                </h3>
+            </div>
+            <div class="swiper-slide flex flex-col bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
+                <span class="text-3xl">
+                    <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+                </span>
+                <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                  "Saya sangat puas dengan layanan yang diberikan. Tim PT Yusra Transindo Service tidak hanya memberikan hasil yang berkualitas tinggi, 
+                  tetapi juga sangat responsif terhadap setiap masukan yang saya berikan. 
+                  aMereka membuat prosesnya menjadi sangat mudah dan menyenangkan."
+                </p>
+                <h3 class="font-bold text-xl text-gray-800">
+                  John M.
+                    <br>
+                    <span class="text-base text-[#5E7087] font-medium">Freelance Designer</span>
+                </h3>
+            </div>
+            <div class="swiper-slide flex flex-col bg-[#F9F9FA] rounded-xl shadow-lg w-[400px] h-[250px] flex-shrink-0 p-4 relative">
+                <span class="text-3xl">
+                    <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+                </span>
+                <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                  "Kami sangat terkesan dengan dedikasi dan kreativitas tim PT Yusra Bintang Jasa.
+                  Mereka tidak hanya memahami visi kami tetapi juga memberikan ide-ide inovatif yang meningkatkan hasil akhir secara signifikan. 
+                 Kami akan terus bekerja dengan mereka di masa depan."
+                </p>
+                <h3 class="font-bold text-xl text-gray-800">
+                    Sarah W. – CEO
+                    <br>
+                    <span class="text-base text-[#5E7087] font-medium">BrightTech Solutions</span>
+                </h3>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
 
   <!-- Review Page -->
   <!-- <section id="review" class="bg-[#F6F6F9] py-[50px]">
@@ -393,7 +458,7 @@
   </section> -->
 
   <!-- Chat Button -->
-  <!-- <aside id="popup_trigger" class=" bg-[#D9B01C] fixed z-[999] bottom-5 right-10 p-3 rounded-full shadow-lg hover:scale-105 duration-300  cursor-pointer hover:bg-[#E4C246]">
+  <aside id="popup_trigger" class=" bg-[#D9B01C] fixed z-[999] bottom-5 right-10 p-3 rounded-full shadow-lg hover:scale-105 duration-300  cursor-pointer hover:bg-[#E4C246]">
     <img src="assets/icons/chat 1.png" alt="icon-chat" class="">
   </aside>
   <aside id="popup_container" class="fixed bottom-24 right-10 z-[999] hidden">
@@ -414,7 +479,7 @@
           </div>
           <span class=" place-self-end mr-5 w-0 h-0 border-solid border-l-[10px] border-l-transparent border-t-[15px] border-t-white border-r-[10px] border-r-transparent"></span>
       </div>
-  </aside> -->
+  </aside>
 
   <!-- FOOTER -->
   <!-- <footer id="contact" class="bg-black px-[200px] pt-10 pb-3 space-y-10 font-sans">
@@ -445,22 +510,18 @@
   <script src="js/script.js"></script>
   <script src="js.js"></script>
   <script>
-    var swiper = new Swiper('.swiper', {
+    var swiperProject = new Swiper('.project-swiper', {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 1,
       direction: 'horizontal',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
       breakpoints: {
         1024: {
           slidesPerView: 3,
-          spaceBetween:10,
+          spaceBetween:1,
           direction: 'horizontal',
         },
         360: {
@@ -474,6 +535,19 @@
           // loop:false,
         },
       },
+    });
+
+    var swiperReview = new Swiper('.review-swiper',{
+      slidesPerView: 2,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      }
     });
   </script>
 </body>

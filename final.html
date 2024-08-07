@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      .bg-black-on-scroll {
+        background: rgba(0, 0, 0, 0.4); 
+        backdrop-filter: blur(7px); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      } 
+
+      .border-b-hidden {
+        border-bottom: none;
+      }
+
+      .border-b-visible {
+        border-bottom: 1px solid white;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        display: block;
+        background-color: #D4AF37;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .home .content.active{
+        display: block;
+      }
+
+      .slider-navigation .nav-btn.active{
+        background: #E5B80B;
+        width: 25px;
+        opacity: 100%;
+      }
+
+      .img-slide{
+        position: absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+        /*clip-path: inset(0 100% 0 0);*/
+      }
+
+      .img-slide.active{
+        clip-path: circle(150% at 0 50%);
+        transition: 2s ease;
+        transition-property: clip-path;
+      }
+
+      .logo-container{
+        overflow: hidden;
+      }
+
+      .swiper{
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-pagination-bullet {
+        background: #5E7087; 
+        width: 12px; 
+        height: 12px; 
+        border-radius: 50%; 
+        opacity: 1; 
+        transition: background 0.3s, width 0.3s;
+      }
+      .swiper-pagination-bullet-active {
+        background: #D9B01C; 
+      }
+      .swiper-pagination-bullet:hover {
+        background: #D9B01C; 
+      }
+        @layer utilities {
+            .scroll-bar::-webkit-scrollbar{
+                display: none;
+            }
+            .scroll-bar{
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+
+      @media (max-width: 1024px){
+        header .navigation{
+          position: absolute;
+          width: 100%;
+          top: 50px;
+          left: 0;
+          background: rgba(1, 1, 1, 0.5);
+          display: none;  
+        } 
+        .swiper{
+          height: 1000px;
+        }
+        .swiper-button-next, .swiper-button-prev{
+          display: none;
+        }
+      }
+    </style>
+</head>
+
+<body class="scroll-bar m-0 p-0"><!--  box-border -->
+  
+  <header class="fixed top-0 left-0 w-full pt-[10px] px-[100px] lg:py-[12px] lg:px-[20px] transition duration-300 ease-in-out z-[998] bg-transparent border-b-hidden">
+    <nav class="border-b-[1px] flex justify-between items-center transition duration-500 ease-in-out">
+      <a href="#home" class="brand flex items-center text-[#fff] font-bold text-2xl uppercase cursor-pointer">
+        <img src="./assets/icons/logo.svg" alt="logo" class="w-8 h-auto">
+        <h1 class="text-[#D9B01C] ml-2 lg:text-lg">Yusra</h1>
+      </a>
+        <div class="menu-btn">
+            <div class="bar-menu hidden lg:block">
+                <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+            </div>
+            <div class="x-btn hidden opacity-0 scale-0 transition-opacity ">
+                <i class="fa-solid fa-x fa-xl" style="color: #ffffff;"></i>
+            </div>
+            <div class="navigation relative"> <!-- Hide navbar button -->
+                <div class="navigation-items lg:flex lg:flex-col">
+                    <a href="#home" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Home</a>
+                    <a href="#about" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">About us</a>
+                    <a href="#service" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Services</a>
+                    <a href="#project" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Projects</a>
+                    <a href="#contact" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Contact us</a>
+                </div> 
+            </div> 
+      </div> 
+    </nav>
+  </header>
+
+  <!-- Home Page -->
+  <section id="home" class="home relative w-full min-h-screen flex flex-col justify-center py-[50px] px-[100px] lg:py-[100px] lg:px-[20px] bg-[#090909]
+                  before:z-[777] before:absolute before:w-full before:h-screen before:top-0 before:left-0 before:bg-[#090909]
+  ">
+  
+    <img src="./assets/img/2.webp" alt="" class="img-slide active z-[888] absolute top-0 left-0 w-full h-full object-cover">
+    <img src="./assets/img/ellKwhIm9ow.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
+    <img src="./assets/img/3.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
+
+    <div class="overlay absolute top-0 left-0 w-full h-full bg-black opacity-40 z-[888]"></div>
+
+    <div class="content active z-[888] text-[#fff] w-full mt-[50px] hidden">
+      <p class="text-5xl lg:text-3xl uppercase tracking-widest font-inter font-bold flex justify-center">Information Technology Partner</p>
+    </div>
+    <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
+      <p class="text-6xl lg:text-3xl uppercase tracking-widest font-inter font-bold flex justify-center">Logistic Partner</p>
+    </div>
+    <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
+      <p class="text-6xl lg:text-3xl uppercase tracking-widest font-inter font-bold flex justify-center">Document Agency Partner</p>
+    </div>
+
+    <div class="slider-navigation flex justify-center w-full bottom-20 z-[888] translate-y-[80px] mb-[12px] space-x-2">
+      <span class="nav-btn active w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/script.js"></script>
+  <script src="js.js"></script>
+  <script>
+    var swiperProject = new Swiper('.project-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 1,
+      direction: 'horizontal',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween:1,
+          direction: 'horizontal',
+        },
+        360: {
+          direction: 'vertical',
+          slidesPerView: 2,
+          // spaceBetween:20,
+          scrollbar:{
+            el: '.swiper-scrollbar',
+          },
+          mousewheel:true,
+          // loop:false,
+        },
+      },
+    });
+
+    var swiperReview = new Swiper('.review-swiper',{
+      slidesPerView: 2,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
+</body>
+</html>
