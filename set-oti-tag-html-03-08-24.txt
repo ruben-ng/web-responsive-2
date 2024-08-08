@@ -26,3 +26,5 @@
 
 
   <!-- <div class="absolute inset-0 bg-black opacity-30"></div> -->
+
+  mx-auto py-[50px] px-[200px] lg:py-[100px] lg:px-[20px]

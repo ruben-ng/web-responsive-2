@@ -4,3 +4,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.menu-line{
+    @apply w-[25px] h-[3px] bg-white rounded-xl
+}
+
+.menu-x > span:nth-child(1){
+    @apply rotate-45;
+}
+
+.menu-x > span:nth-child(2){
+    @apply scale-0;
+}
+
+.menu-x > span:nth-child(3){
+    @apply -rotate-45;
+}

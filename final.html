@@ -53,14 +53,16 @@
       .img-slide{
         position: absolute;
         width: 100%;
-        clip-path: circle(0% at 0 50%);
-        /*clip-path: inset(0 100% 0 0);*/
+        left: 100%;
+        transition: left 1s ease;
+        /* clip-path: circle(0% at 0 50%); */
       }
 
       .img-slide.active{
-        clip-path: circle(150% at 0 50%);
-        transition: 2s ease;
-        transition-property: clip-path;
+        left: 0;
+        /* clip-path: circle(150% at 0 50%); */
+        /* transition: 2s ease; */
+        /* transition-property: clip-path; */
       }
 
       .logo-container{
@@ -103,14 +105,13 @@
         }
 
       @media (max-width: 1024px){
-        header .navigation{
+        /* header .navigation{
           position: absolute;
           width: 100%;
           top: 50px;
           left: 0;
           background: rgba(1, 1, 1, 0.5);
-          display: none;  
-        } 
+        }  */
         .swiper{
           height: 1000px;
         }
@@ -123,26 +124,25 @@
 
 <body class="scroll-bar m-0 p-0"><!--  box-border -->
   
-  <header class="fixed top-0 left-0 w-full pt-[10px] px-[100px] lg:py-[12px] lg:px-[20px] transition duration-300 ease-in-out z-[998] bg-transparent border-b-hidden">
-    <nav class="border-b-[1px] flex justify-between items-center transition duration-500 ease-in-out">
+  <header class="fixed top-0 left-0 w-full px-[20px] lg:px-[100px] transition duration-300 ease-in-out z-[998] bg-transparent border-b-hidden">
+    <nav class="border-b-[1px] py-[12px] lg:py-[0px] flex justify-between items-center transition duration-500 ease-in-out">
       <a href="#home" class="brand flex items-center text-[#fff] font-bold text-2xl uppercase cursor-pointer">
-        <img src="./assets/icons/logo.svg" alt="logo" class="w-8 h-auto">
-        <h1 class="text-[#D9B01C] ml-2 lg:text-lg">Yusra</h1>
+        <img src="./assets/icons/logo.svg" alt="logo" class="w-8 h-auto lg:w-11">
+        <h1 class="text-[#D9B01C] ml-2 text-lg lg:text-2xl">Yusra</h1>
       </a>
         <div class="menu-btn">
-            <div class="bar-menu hidden lg:block">
-                <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
-            </div>
-            <div class="x-btn hidden opacity-0 scale-0 transition-opacity ">
-                <i class="fa-solid fa-x fa-xl" style="color: #ffffff;"></i>
-            </div>
-            <div class="navigation relative"> <!-- Hide navbar button -->
-                <div class="navigation-items lg:flex lg:flex-col">
-                    <a href="#home" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Home</a>
-                    <a href="#about" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">About us</a>
-                    <a href="#service" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Services</a>
-                    <a href="#project" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Projects</a>
-                    <a href="#contact" class="nav-link relative m-[10px] p-[4px] text-lg text-center  focus:bg-[#000000] text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Contact us</a>
+            <button id="menu-bar" class="flex flex-col gap-[5px] items-center lg:hidden" type="button">
+              <span class="menu-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="menu-line transition duration-300 ease-in-out"></span>
+              <span class="menu-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+            <div class="navigation absolute top-[50px] left-0 w-full bg-black hidden lg:block lg:static lg:bg-transparent lg:max-w-full"> <!-- Hide navbar button -->
+                <div class="navigation-items block py-4 lg:flex">
+                    <a href="#home" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Home</a>
+                    <a href="#about" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">About us</a>
+                    <a href="#service" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Services</a>
+                    <a href="#project" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Projects</a>
+                    <a href="#contact" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Contact us</a>
                 </div> 
             </div> 
       </div> 
@@ -150,33 +150,104 @@
   </header>
 
   <!-- Home Page -->
-  <section id="home" class="home relative w-full min-h-screen flex flex-col justify-center py-[50px] px-[100px] lg:py-[100px] lg:px-[20px] bg-[#090909]
+  <section id="home" class="home relative w-full min-h-screen flex flex-col justify-center overflow-hidden py-[10px] px-[20px] lg:py-[10px] lg:px-[100px] bg-[#090909]
                   before:z-[777] before:absolute before:w-full before:h-screen before:top-0 before:left-0 before:bg-[#090909]
   ">
   
     <img src="./assets/img/2.webp" alt="" class="img-slide active z-[888] absolute top-0 left-0 w-full h-full object-cover">
-    <img src="./assets/img/ellKwhIm9ow.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
+    <img src="./assets/img/hero-logistic.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
     <img src="./assets/img/3.webp" alt="" class="img-slide z-[888] absolute top-0 left-0 w-full h-full object-cover">
 
-    <div class="overlay absolute top-0 left-0 w-full h-full bg-black opacity-40 z-[888]"></div>
+    <div class="overlay absolute top-0 left-0 w-full h-full bg-black opacity-55 z-[888]"></div>
 
-    <div class="content active z-[888] text-[#fff] w-full mt-[50px] hidden">
-      <p class="text-5xl lg:text-3xl uppercase tracking-widest font-inter font-bold flex justify-center">Information Technology Partner</p>
-    </div>
-    <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
-      <p class="text-6xl lg:text-3xl uppercase tracking-widest font-inter font-bold flex justify-center">Logistic Partner</p>
-    </div>
-    <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
-      <p class="text-6xl lg:text-3xl uppercase tracking-widest font-inter font-bold flex justify-center">Document Agency Partner</p>
-    </div>
 
-    <div class="slider-navigation flex justify-center w-full bottom-20 z-[888] translate-y-[80px] mb-[12px] space-x-2">
-      <span class="nav-btn active w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
-      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
-      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-70 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+    <div class="z-[888] flex-1 flex items-center">
+      <div class="content active z-[888] text-[#fff] w-full mt-[50px] hidden">
+        <p class="text-3xl lg:text-5xl uppercase tracking-widest font-inter font-bold flex justify-center">Information Technology Partner</p>
+      </div>
+      <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
+        <p class="text-3xl lg:text-6xl uppercase tracking-widest font-inter font-bold flex justify-center">Logistic Partner</p>
+      </div>
+      <div class="content z-[888] text-[#fff] w-full mt-[50px] hidden"><!--w-[70%]-->
+        <p class="text-3xl lg:text-6xl uppercase tracking-widest font-inter font-bold flex justify-center">Document Agency Partner</p>
+      </div>
+    </div>
+    
+    <div class="slider-navigation flex justify-center w-full z-[888] mb-[12px] space-x-2">
+      <span class="nav-btn active w-[12px] h-[8px] bg-[#5E7087] opacity-80 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-80 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
+      <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-80 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
     </div>
   </section>
 
+  <!-- About page start -->
+  <section class="pt-20 pb-16 overflow-hidden">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="judul w-full px-4 mb-6">
+          <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="font-semibold text-3xl text-[#353839] ">About us</h2>
+          <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-[#D9B01C] text-5xl font-bold border-b-[2px] pb-2">Who we are</h1>
+          <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true" class="text-base text-[#353839] pt-2">Customer satisfaction is our top most priority</p>
+        </div>
+
+        <div class="w-full px-4">
+          <p data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="text-pretty text-base text-[#353839] text-justify max-w-xl mb-5">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
+            Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
+            services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
+          </p>
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="img-about relative flex items-center p-8">
+            <div class="aksen absolute h-full w-[100px] left-0 bg-[#D9B01C] rounded-xl"></div>
+            <img src="./assets/img/ship.webp" alt="" class="w-full h-auto rounded-xl drop-shadow-lg">
+          </div>
+          <div class="wrapper-text ">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Vision</h2>
+            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-[19px]">Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
+          </div>
+          <div class="wrapper-text">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Mission</h2>
+            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-lg">Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About page end -->
+  
+  <!-- <section id="about" class="bg-white pt-36 pb-32">
+    <div class="container">
+      <div class="judul mb-6">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="font-semibold text-3xl text-[#353839] ">About us</h2>
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-[#D9B01C] text-6xl font-bold border-b-[2px] lg:text-4xl">Who we are</h1>
+        <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true" class="text-base text-[#353839]">Customer satisfaction is our top most priority</p>
+      </div>
+  
+      <div class="content-about">
+        <div class=" w-full flex items-center gap-10 mb-6 lg:flex lg:flex-wrap">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="img-about w-1/2 lg:w-full relative h-[400px]">
+            <div class="aksen absolute h-full w-[100px] left-0 bg-[#D9B01C] rounded-xl"></div>
+            <div class="relative w-full h-full flex items-center pl-10 bg-slsate-500 ">
+              <img src="./assets/img/ship.webp" alt="" class="w-full h-[90%] rounded-xl drop-shadow-lg">
+            </div>
+          </div>
+          <p data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="w-1/2 lg:w-full text-pretty text-lg leading-relaxed tracking-wide text-[#353839] text-justify">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
+            Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
+            services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
+          </p>
+        </div>
+    
+        <div class="p-about flex text-justify gap-10 lg:flex lg:flex-col">
+          <div class="wrapper-text ">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Vision</h2>
+            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-[19px]">Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
+          </div>
+          <div class="wrapper-text">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Mission</h2>
+            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-lg">Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
 
 

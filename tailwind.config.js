@@ -5,16 +5,21 @@ module.exports = {
     "./node_modules/tw-elements/js/**/*.js"
   ],
   theme: {
-    screens: {
-      'lg': {'max': '1040px'},
-      'min-desktop': '1080',
+    container: {
+      center: true,
+      padding: '16px',
     },
-
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         bebas: ['Bebas Neue', 'sans-serif'],
+      },
+      colors: {
+        primary: '#D4AF37',
+      },
+      screens: {
+        '2xl':'1320px',
       },
       boxShadow: {
         // 0 3px -> posisi, 18px -> blur, 5px -> spread

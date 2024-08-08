@@ -1,11 +1,10 @@
 // NAVBAR
-const menu = document.querySelector('.bar-menu');
-const navbar = document.querySelector('.navigation');
+const menu = document.querySelector('#menu-bar');
+const navBar = document.querySelector('.navigation');
 
 menu.addEventListener('click', function() {
-    navbar.classList.remove('hidden');
-    // navbar.classList.add('block');
-    console.log('jing')
+    menu.classList.toggle('menu-x');
+    navBar.classList.toggle('hidden');
 });
 
 
