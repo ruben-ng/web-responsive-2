@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yusra - Logistic, Document, Information Technology</title>
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -82,18 +82,30 @@
 
       .swiper-pagination-bullet {
         background: #5E7087; 
-        width: 12px; 
-        height: 12px; 
+        width: 8px; 
+        height: 8px; 
         border-radius: 50%; 
         opacity: 1; 
         transition: background 0.3s, width 0.3s;
       }
       .swiper-pagination-bullet-active {
         background: #D9B01C; 
+        scale: 1.8;
       }
       .swiper-pagination-bullet:hover {
         background: #D9B01C; 
       }
+
+      .button-view {
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+      
+      .button-view:hover {
+        background-color: #D9B01C;
+        color: white;
+        transform: scale(1.1);
+      }
+
         @layer utilities {
             .scroll-bar::-webkit-scrollbar{
                 display: none;
@@ -105,14 +117,20 @@
         }
 
       @media (max-width: 1024px){
-        /* header .navigation{
+        .navigation{
           position: absolute;
           width: 100%;
-          top: 50px;
+          top: 45px;
           left: 0;
-          background: rgba(1, 1, 1, 0.5);
-        }  */
-        .swiper{
+          /*background: rgba(0, 0, 0, 0.4); 
+          backdrop-filter: blur(7px); 
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transition: background 0.3s ease, box-shadow 0.3s ease;*/
+        } 
+        .swiper:nth-of-type(1){
+          height: auto;
+        }
+        .swiper:nth-of-type(2){
           height: 1000px;
         }
         .swiper-button-next, .swiper-button-prev{
@@ -124,11 +142,11 @@
 
 <body class="scroll-bar m-0 p-0"><!--  box-border -->
   
-  <header class="fixed top-0 left-0 w-full px-[20px] lg:px-[100px] transition duration-300 ease-in-out z-[998] bg-transparent border-b-hidden">
-    <nav class="border-b-[1px] py-[12px] lg:py-[0px] flex justify-between items-center transition duration-500 ease-in-out">
+  <header class="head-nav fixed top-0 left-0 w-full px-[20px] lg:px-[100px] transition duration-300 ease-in-out z-[998] bg-transparent border-b-hidden">
+    <nav class="nav-child border-b-[1px] mt-2 lg:py-[0px] flex justify-between items-center transition duration-500 ease-in-out">
       <a href="#home" class="brand flex items-center text-[#fff] font-bold text-2xl uppercase cursor-pointer">
         <img src="./assets/icons/logo.svg" alt="logo" class="w-8 h-auto lg:w-11">
-        <h1 class="text-[#D9B01C] ml-2 text-lg lg:text-2xl">Yusra</h1>
+        <h1 class="text-[#D9B01C] ml-2 text-lg tracking-[0.2em] lg:text-2xl">Yusra</h1>
       </a>
         <div class="menu-btn">
             <button id="menu-bar" class="flex flex-col gap-[5px] items-center lg:hidden" type="button">
@@ -136,20 +154,20 @@
               <span class="menu-line transition duration-300 ease-in-out"></span>
               <span class="menu-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
-            <div class="navigation absolute top-[50px] left-0 w-full bg-black hidden lg:block lg:static lg:bg-transparent lg:max-w-full"> <!-- Hide navbar button -->
+            <div class="navigation hidden lg:block lg:static lg:bg-transparent lg:max-w-full"> <!-- Hide navbar button -->
                 <div class="navigation-items block py-4 lg:flex">
-                    <a href="#home" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Home</a>
-                    <a href="#about" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">About us</a>
-                    <a href="#service" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Services</a>
-                    <a href="#project" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Projects</a>
-                    <a href="#contact" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out">Contact us</a>
+                    <a href="#home" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out hover:text-[#D9B01C]">Home</a>
+                    <a href="#about" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out hover:text-[#D9B01C]">About</a>
+                    <a href="#service" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out hover:text-[#D9B01C]">Services</a>
+                    <a href="#project" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out hover:text-[#D9B01C]">Projects</a>
+                    <a href="#contact" class="nav-link relative flex justify-center mx-5 py-2 lg:pb-[2px] text-base text-[#fff] font-medium no-underline transition duration-300 ease-in-out hover:text-[#D9B01C]">Contact Us</a>
                 </div> 
             </div> 
       </div> 
     </nav>
   </header>
 
-  <!-- Home Page -->
+  <!-- Home Page start-->
   <section id="home" class="home relative w-full min-h-screen flex flex-col justify-center overflow-hidden py-[10px] px-[20px] lg:py-[10px] lg:px-[100px] bg-[#090909]
                   before:z-[777] before:absolute before:w-full before:h-screen before:top-0 before:left-0 before:bg-[#090909]
   ">
@@ -179,33 +197,39 @@
       <span class="nav-btn w-[12px] h-[8px] bg-[#5E7087] opacity-80 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ease-linear hover:scale-[1.2]"></span>
     </div>
   </section>
+  <!-- Home page end -->
 
   <!-- About page start -->
-  <section class="pt-20 pb-16 overflow-hidden">
+  <section id="about" class="pt-20 pb-16 overflow-hidden">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="judul w-full px-4 mb-6">
           <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="font-semibold text-3xl text-[#353839] ">About us</h2>
-          <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-[#D9B01C] text-5xl font-bold border-b-[2px] pb-2">Who we are</h1>
-          <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true" class="text-base text-[#353839] pt-2">Customer satisfaction is our top most priority</p>
+          <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-[#D9B01C] text-5xl lg:text-6xl font-bold border-b-[2px] pb-2">Who we are</h1>
+          <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true" class="text-base text-[#353839] pt-2 font-semibold">Customer satisfaction is our top most priority</p>
         </div>
 
         <div class="w-full px-4">
-          <p data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="text-pretty text-base text-[#353839] text-justify max-w-xl mb-5">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
-            Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
-            services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
-          </p>
-          <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="img-about relative flex items-center p-8">
-            <div class="aksen absolute h-full w-[100px] left-0 bg-[#D9B01C] rounded-xl"></div>
-            <img src="./assets/img/ship.webp" alt="" class="w-full h-auto rounded-xl drop-shadow-lg">
+          <div class="lg:flex lg:flex-row-reverse lg:items-center">
+            <p data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="text-pretty text-base text-[#353839] text-justify max-w-3xl mb-5">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
+              Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
+              services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
+            </p>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="img-about relative flex items-center p-7 lg:p-8">
+              <div class="aksen absolute h-full w-[15%] left-0 bg-[#D9B01C] rounded-xl"></div>
+              <img src="./assets/img/ship.webp" alt="" class="w-full h-auto rounded-xl drop-shadow-lg">
+            </div>
           </div>
-          <div class="wrapper-text ">
-            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Vision</h2>
-            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-[19px]">Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
-          </div>
-          <div class="wrapper-text">
-            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Mission</h2>
-            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-lg">Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
+          
+          <div class="lg:flex lg:gap-5">
+            <div class="wrapper-text ">
+              <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-2xl lg:text-3xl font-semibold">Vision</h2>
+              <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] max-w-3xl text-base text-justify text-pretty">Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
+            </div>
+            <div class="wrapper-text">
+              <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-2xl lg:text-3xl font-semibold">Mission</h2>
+              <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] max-w-3xl text-base text-justify text-pretty">Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -213,46 +237,292 @@
   </section>
   <!-- About page end -->
   
-  <!-- <section id="about" class="bg-white pt-36 pb-32">
+  <!-- Service page start -->
+  <section id="service" class="pt-14 pb-12 overflow-hidden bg-[#090909]s bg-[#1A1B1F]">
     <div class="container">
-      <div class="judul mb-6">
-        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="font-semibold text-3xl text-[#353839] ">About us</h2>
-        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-[#D9B01C] text-6xl font-bold border-b-[2px] lg:text-4xl">Who we are</h1>
-        <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true" class="text-base text-[#353839]">Customer satisfaction is our top most priority</p>
-      </div>
-  
-      <div class="content-about">
-        <div class=" w-full flex items-center gap-10 mb-6 lg:flex lg:flex-wrap">
-          <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="img-about w-1/2 lg:w-full relative h-[400px]">
-            <div class="aksen absolute h-full w-[100px] left-0 bg-[#D9B01C] rounded-xl"></div>
-            <div class="relative w-full h-full flex items-center pl-10 bg-slsate-500 ">
-              <img src="./assets/img/ship.webp" alt="" class="w-full h-[90%] rounded-xl drop-shadow-lg">
+      <div class="flex flex-wrap w-full gap-5">
+        <div class="w-full text-center">
+          <h2 class="text-[#D4AF37] font-light text-3xl lg:text-6xl">OUR<span class="text-[#D4AF37]  font-semibold ml-3">SERVICE</span></h2>
+        </div>
+        <div class="bg-[#1C1C1C]s bg-[#21242A] p-7 flex flex-wrap justify-center rounded-xl lg:flex lg:gap-7">
+          <div class="w-full max-w-xl h-auto">
+            <img data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="w-auto h-full shadow-img-service rounded-xl" src="./assets/img/doc-project.webp" alt="">
+          </div>
+          <div class="text-center mt-2 lg:w-1/2">
+            <h2 data-aos="fade-up" data-aos-duration="500" data-aos-once="true" class="font-semibold text-xl lg:text-2xl uppercase text-[#D4AF37] ">Documents Agency</h2>
+            <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="50" data-aos-once="true" class="text-white text-justify font-light mt-3 text-base lg:text-lg leading-tight tracking-wide">
+              Unlock the power of seamless document management with us! Our agency transforms your paperwork chaos into organized clarity. From legal contracts to business paperwork, we handle it all with precision and care. Let us simplify your documentation so you can focus on what truly matters. Experience the ease of professional document handling and never miss a detail again. Join our community of satisfied clients today and elevate your document game!  
+            </p>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
             </div>
           </div>
-          <p data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="w-1/2 lg:w-full text-pretty text-lg leading-relaxed tracking-wide text-[#353839] text-justify">Established in 2019, Yusra Transindo Service is a Batam-based, dedicated freight forwarding company with a global outlook. Yusra Transindo 
-            Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
-            services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
-          </p>
         </div>
-    
-        <div class="p-about flex text-justify gap-10 lg:flex lg:flex-col">
-          <div class="wrapper-text ">
-            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Vision</h2>
-            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-[19px]">Yusra boasts the ability to cater to different clients’ needs from planning the optimal system of freight transportation right through to operation execution, thereby giving our clients an unsurpassed advantage and cost savings in today’s competitive environment.</p>
+        <div class="bg-[#1C1C1C]s bg-[#21242A] p-7 flex flex-wrap justify-center rounded-xl lg:flex lg:gap-7 lg:flex-row-reverse">
+          <div class="w-full max-w-xl h-auto">
+            <img data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="w-auto h-full shadow-img-service rounded-xl" src="./assets/img/contrail-ocean-ship-carrying-container-1300x1300.webp" alt="">
           </div>
-          <div class="wrapper-text">
-            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="text-center text-[#D9B01C] text-4xl font-semibold">Mission</h2>
-            <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" class="text-[#353839] text-lg">Customer satisfaction is our top most priority, and the driving force behind our operations. Your Personal Yusra, Consultant provides a single point of contact so you are assured of service excellence from the team, every step of the way.</p>
+          <div class="text-center mt-2 lg:w-1/2">
+            <h2 data-aos="fade-up" data-aos-duration="500" data-aos-once="true" class="font-semibold text-xl lg:text-2xl uppercase text-[#D4AF37] ">Logistics</h2>
+            <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="50" data-aos-once="true" class="text-white text-justify font-light mt-3 text-base lg:text-lg leading-tight tracking-wide">
+              Transform your supply chain with our cutting-edge logistics solutions! We streamline your operations from warehousing to delivery, ensuring efficiency and reliability every step of the way. Trust us to handle your logistics needs so you can focus on growing your business. Experience hassle-free shipping and superior service with our dedicated team. Join us today and let’s drive your success forward together!  
+            </p>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
+            </div>          
+          </div>
+        </div>
+        <div class="bg-[#1C1C1C]s bg-[#21242A] p-7 flex flex-wrap justify-center rounded-xl lg:flex lg:gap-7">
+          <div class="w-full max-w-xl h-auto">
+            <img data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="w-auto h-full shadow-img-service rounded-xl" src="./assets/img/it-3.webp" alt="">
+          </div>
+          <div class="text-center mt-2 lg:w-1/2">
+            <h2 data-aos="fade-up" data-aos-duration="500" data-aos-once="true" class="font-semibold text-xl lg:text-2xl uppercase text-[#D4AF37] ">Information Technology</h2>
+            <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="50" data-aos-once="true" class="text-white text-justify font-light mt-3 text-base lg:text-lg leading-tight tracking-wide">
+              Elevate your business with cutting-edge Information Technology solutions! Our expert team delivers innovative IT services that drive efficiency and unlock new possibilities. From seamless integrations to robust security, we tailor solutions to meet your unique needs. Embrace the future with technology that empowers your growth and enhances your operations. Partner with us today and transform your IT challenges into opportunities for success!  
+            </p>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
+            </div>          
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+  <!-- Service page end -->
 
+  <!-- Client Page start -->
+  <section id="client" class="pt-7 pb-3">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="font-normal text-3xl lg:text-6xl tracking-tight uppercase">Our<span class=" font-bold ml-3 tracking-wide text-[#D9B01C]">Clients</span></h2>
+        <p class="font-medium text-lg tracking-widest">Pleasure to work with</p>
+      </div>
+      <div class="client-swiper overflow-hidden flex">
+        <div class="logo swiper-wrapper items-center">
+          <div class="swiper-slide">
+            <img src="./assets/clients/Cladtek Arabia-Photoroom.png" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/asia_limited_2.png" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/caterpillar-2.svg" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/ccn.png" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/f748d3e0-8899-4adc-b8b4-b403012cb08f.webp" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/Fagioli_LOGO_sfumatura_lato prova.webp" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/icon-proTeknik.png" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/image 7.png" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/images.webp" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/clients/logo-site@2x.png" alt="" class="w-[120px] lg:w-[200px] h-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Client Page end -->
 
+  <!-- Projects Page start -->
+  <section id="project" class="pt-14 pb-12 bg-[#090909]">
+    <div class="container">
+      <div class="flex flex-col lg:mb-7">
+        <h1 class="font-semibold text-2xl text-[#D9B01C] uppercase tracking-wide">Projects</h1>
+        <span class="w-[7%] lg:w-[4%] h-[2px] bg-[#D9B01C]"></span>
+      </div>
+      <div class="swiper project-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
+              <img src="./assets/img/1.png" alt="" class="w-full h-auto">
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+              <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
+                <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
+                <p class="text-sm">Base Move All Equipment from KTU Sekupang Yars to Bluerock Yard Batu Ampar</p>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
+              <img src="./assets/img/4.png" alt="" class="w-full h-auto">
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+              <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
+                <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
+                <p class="text-sm">Shipment Black Mamba from Africa to Singapore, Singapore to Batam, Year 2021</p>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
+              <img src="./assets/img/2.png" alt="" class="w-full h-auto">
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+              <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
+                <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Documents Handling</h2>
+                <p class="text-sm">jetty special terminal permit processing PT. Caterpillar</p>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
+              <img src="./assets/img/img-project-2.png" alt="" class="w-full h-auto">
+              <div class="absolute inset-0 bg-black opacity-10"></div>
+              <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
+                <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
+                <p class="text-sm">Shipment galvanize bamboo wooden beam from India to Batam ,and Batam to Bogor – PT Ecomat Pro</p>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Projects Page end -->
 
+  <!-- Review Page start -->
+  <section id="review" class="pt-14 pb-12 bg-[#F6F6F9]">
+    <div class="container">
+      <h2 class="uppercase text-3xl text-center text-[#D9B01C] font-bold mb-4 tracking-wider">Reviews</h2>
+      <div class="review-swiper swiper overflow-hidden px-4 shrink-0">
+        <div class="swiper-wrapper mb-10">
+            <div class="swiper-slide flex flex-col bg-white rounded-xl shadow-lg flex-shrink-0 p-4 relative">
+              <span class="text-3xl">
+                <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+              </span>
+              <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                "Saya menggunakan layanan dari Yusra Bintang Jasa untuk pengurusan dokumen legalitas perusahaan saya, dan saya sangat puas. Prosesnya cepat, profesional, dan transparan. Tim mereka sangat responsif dan selalu memberikan update terkini. Layanan yang sangat direkomendasikan bagi siapa saja yang membutuhkan pengurusan dokumen secara efisien!."
+              </p>
+              <h3 class="text-start font-bold text-xl text-gray-800">
+                Andi Saputra
+              </h3>
+            </div>
+            <div class="swiper-slide flex flex-col bg-white rounded-xl shadow-lg flex-shrink-0 p-4 relative">
+              <span class="text-3xl">
+                <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+              </span>
+              <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                "Yusra Transindo Service adalah pilihan terbaik untuk kebutuhan logistik kami. Pengiriman barang selalu tepat waktu dan dalam kondisi baik. Mereka juga memiliki layanan pelanggan yang sangat baik, selalu siap membantu dan memberikan solusi jika ada kendala. Kami sangat percaya pada profesionalisme mereka dan akan selalu menggunakan jasa mereka."
+              </p>
+              <h3 class="text-start font-bold text-xl text-gray-800">
+                Rina Kartika
+              </h3>
+            </div>
+            <div class="swiper-slide flex flex-col bg-white rounded-xl shadow-lg flex-shrink-0 p-4 relative">
+              <span class="text-3xl">
+                <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+              </span>
+              <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                "Layanan dari Yusra Bintang Jasa sangat membantu dalam mengurus dokumen-dokumen legalitas perusahaan saya. Meski ada beberapa keterlambatan di awal, mereka mampu mengatasinya dengan baik dan tetap profesional. Secara keseluruhan, saya sangat puas dengan hasil akhirnya dan akan kembali menggunakan layanan mereka."
+              </p>
+              <h3 class="text-start font-bold text-xl text-gray-800">
+                Budi Santoso
+              </h3>
+            </div>
+            <div class="swiper-slide flex flex-col bg-white rounded-xl shadow-lg flex-shrink-0 p-4 relative">
+              <span class="text-3xl">
+                <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+              </span>
+              <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                "Saya sangat merekomendasikan Yusra Transindo Service untuk jasa logistik. Pengiriman barang-barang kami selalu tepat waktu, dan harganya sangat bersaing. Selain itu, tim mereka sangat ramah dan komunikatif. Tidak ada masalah selama proses pengiriman, yang membuat kami sangat puas dengan layanan mereka."
+              </p>
+              <h3 class="text-start font-bold text-xl text-gray-800">
+                Siti Aisyah
+              </h3>
+            </div>
+            <div class="swiper-slide flex flex-col bg-white rounded-xl shadow-lg flex-shrink-0 p-4 relative">
+              <span class="text-3xl">
+                <i class="fa-solid fa-quote-left fa-2xl absolute left-8 top-8 opacity-10 -rotate-[30deg]"></i>
+              </span>
+              <p class="italic text-[#5E7087] font-normal text-sm tracking-tight border-b-2 pb-4 mb-2 relative">
+                "Pengalaman saya dengan Yusra Bintang Jasa cukup memuaskan. Mereka sangat detail dalam mengurus dokumen legalitas perusahaan saya, sehingga saya merasa sangat terbantu. Ada sedikit kendala komunikasi di awal, namun segera diselesaikan dengan baik. Secara keseluruhan, mereka adalah pilihan yang tepat untuk pengurusan dokumen dan legalitas."
+              </p>
+              <h3 class="text-start font-bold text-xl text-gray-800">
+                Dian Permana
+              </h3>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Review Page end -->
 
+  <!-- Chat button start -->
+  <aside id="popup_trigger" class=" bg-[#D9B01C] fixed z-[999] bottom-5 right-5 lg:right-10 p-3 rounded-full shadow-lg hover:scale-105 duration-300  cursor-pointer hover:bg-[#E4C246]">
+    <img src="./assets/icons/chat 1.png" alt="" class="w-[30px] lg:w-[45px] h-auto">
+  </aside>
+  <aside id="popup_container" class="fixed bottom-20 lg:bottom-24 right-5 lg:right-10 z-[999] hidden">
+      <div class="grid">
+          <div class="bg-white text-black text-sm font-semibold font-sans tracking-wide rounded-lg py-2 shadow-cht-container">
+              <a href="mailto:rubenkece2@gmail.com" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+                  <img src="assets/icons/gmail-cht.png" alt="email" class="w-[30px] lg:w-[40px] h-auto">
+                  <span class="">Email</span>
+              </a>
+              <a href="https://www.instagram.com/rubenbkr_/" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+                  <img src="assets/icons/instagram-cht.png" alt="instagram" class="w-[30px] lg:w-[40px] h-auto">
+                  <span class="">Instagram</span>
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=62811388874" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+                  <img src="assets/icons/whatsapp-cht.png" alt="whatsapp" class="w-[30px] lg:w-[40px] h-auto">
+                  <span class="">Whatsapp</span>
+              </a>
+          </div>
+          <span class=" place-self-end mr-5 w-0 h-0 border-solid border-l-[10px] border-l-transparent border-t-[15px] border-t-white border-r-[10px] border-r-transparent"></span>
+      </div>
+  </aside>
+  <!-- Chat button end -->
 
+  <!-- Footer page start -->
+  <footer id="contact" class="pt-7 pb-2 overflow-hidden bg-[#090909]">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <a href="#home" class="items-center justify-center flex flex-wrap text-[#FFDD43] space-x-3 w-full">
+          <img src="assets/icons/logo.png" alt="Logo" class="cursor-pointer w-[40px] h-auto">
+          <span class="cursor-pointer text-pretty font-semibold text-xl tracking-[0.2em]">YUSRA</span>
+        </a>
+        <div class="flex justify-between mt-5">
+          <div class="flex flex-col gap-[2px] text-[#d4d4d4] tracking-wide">
+            <h2 class="text-white font-bold text-lg">Project</h2>
+            <a class="text-[14px] hover:text-[#FFDD43]" href="#home">Documents Agency</a>
+            <a class="text-[14px] hover:text-[#FFDD43]" href="#about">Logistic</a>
+            <a class="text-[14px] hover:text-[#FFDD43]" href="#services">Information Technology</a>
+          </div>
+          <div class="text-[#d4d4d4]">
+            <h2 class="text-white font-bold text-lg">Location</h2>
+            <p class="text-[14px] italic"><i class="fa-solid fa-map-location-dot mr-2"></i>Batam, Indonesia</p>
+          </div>
+        </div>
+        <div class="flex justify-center gap-6 my-5 items-center">
+          <a href="" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-brands fa-instagram fa-xl"></i></a>
+          <a href="#" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-regular fa-envelope fa-xl"></i></a>
+          <a href="#" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+        </div>
+        <div class="text-center text-[#c3c6d1] font-light tracking-wider text-xs">
+            &copy; 2024 Yusra Group. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer page end -->
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -279,7 +549,7 @@
         360: {
           direction: 'vertical',
           slidesPerView: 2,
-          // spaceBetween:20,
+          spaceBetween:10,
           scrollbar:{
             el: '.swiper-scrollbar',
           },
@@ -289,9 +559,49 @@
       },
     });
 
+    var swiperclient;
+    function swiperClient(){
+      swiperclient = new Swiper('.client-swiper',{
+        slidesPerView: 2,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          360: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          }
+        }
+      })
+    };
+    swiperClient();
+    function handleResize() {
+      if (window.innerWidth >= 1024) {
+          if (swiperclient) {
+             swiperclient.destroy(true, true);
+              swiperclient = null;
+          }
+      } else {
+          if (!swiperclient) {
+              swiperClient();
+          }
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    //handleResize();
+    
     var swiperReview = new Swiper('.review-swiper',{
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
+      direction: 'horizontal',
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -299,8 +609,20 @@
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
       }
     });
+    
+  
   </script>
 </body>
 </html>

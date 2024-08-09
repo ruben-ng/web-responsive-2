@@ -35,7 +35,7 @@ const autoSlide = () => {
     console.log(currentIndex);
 }
 
-setInterval(autoSlide, 6000);
+setInterval(autoSlide, 4000);
 
 
 
@@ -45,17 +45,5 @@ const logo = document.querySelector(".logo").cloneNode(true);
 document.querySelector(".logo-container").appendChild(logo);
 
 
-// Button chat
-    document.addEventListener('DOMContentLoaded', function () {
-        const trigger = document.getElementById('popup_trigger');
-        const container = document.getElementById('popup_container');
 
-        trigger.addEventListener('click', function () {
-            container.classList.toggle('hidden');
-        });
-        document.addEventListener('click', function (event) {
-            if (!trigger.contains(event.target) && !container.contains(event.target)) {
-                container.classList.add('hidden');
-            }
-        });
-    });
+   

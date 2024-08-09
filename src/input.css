@@ -10,7 +10,7 @@ body{
 }
 
 .menu-line{
-    @apply w-[25px] h-[3px] bg-white rounded-xl
+    @apply w-[20px] h-[2px] bg-white rounded-full
 }
 
 .menu-x > span:nth-child(1){

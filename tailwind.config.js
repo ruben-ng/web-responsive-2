@@ -20,6 +20,7 @@ module.exports = {
       },
       screens: {
         '2xl':'1320px',
+        'max' : '1028px',
       },
       boxShadow: {
         // 0 3px -> posisi, 18px -> blur, 5px -> spread
