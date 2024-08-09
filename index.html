@@ -131,7 +131,7 @@
           height: auto;
         }
         .swiper:nth-of-type(2){
-          height: 1000px;
+          height: 500px;
         }
         .swiper-button-next, .swiper-button-prev{
           display: none;
@@ -548,20 +548,19 @@
         },
         360: {
           direction: 'vertical',
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween:10,
           scrollbar:{
             el: '.swiper-scrollbar',
+            hide: true,
           },
           mousewheel:true,
-          // loop:false,
+          //loop:false,
         },
       },
     });
 
-    var swiperclient;
-    function swiperClient(){
-      swiperclient = new Swiper('.client-swiper',{
+     var swiperclient = new Swiper('.client-swiper',{
         slidesPerView: 2,
         spaceBetween: 20,
         autoplay: {
@@ -579,8 +578,6 @@
           }
         }
       })
-    };
-    swiperClient();
     function handleResize() {
       if (window.innerWidth >= 1024) {
           if (swiperclient) {

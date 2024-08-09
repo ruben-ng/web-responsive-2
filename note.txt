@@ -1,0 +1,38 @@
+-> judul di artikel.html
+	our service gak usah foto, hero image aja.
+-> document, it bintang jasa satu artikel.
+-> logistic yusra trasindo.
+-> judul "forwarding agency".
+
+
+navbar untuk mobile di lebarin
+background navbar waktu open
+
+home page
+-> main teks di betulin lagi versi mobile
+
+about page
+-> akses gold di lebarin versi mobile
+-> kasih jarak antara judul Mission
+
+our service
+-> judul dari masing-masing kategori
+-> dirapihin lagi teksnya
+
+project
+-> versi mobile di buat horizontal aja, terlalu ribet di scroll vertikal
+	buat indikator kalau project bisa di scroll
+
+reviews
+-> dipersingkat maksudnya
+-> opacity dari logo quote di pudarin lagi
+
+
+
+ARTIKEL
+
+versi mobile
+
+bagian tanggal, judul, info contact di rapihin, teks 1,2,3 di kasih jaraknya
+
+
