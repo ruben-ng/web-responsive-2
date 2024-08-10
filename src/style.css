@@ -756,6 +756,10 @@ video {
   z-index: 999;
 }
 
+.float-end{
+  float: inline-end;
+}
+
 .m-0{
   margin: 0px;
 }
@@ -868,6 +872,26 @@ video {
   margin-top: 50px;
 }
 
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+
+.ml-5{
+  margin-left: 1.25rem;
+}
+
+.ml-10{
+  margin-left: 2.5rem;
+}
+
+.mr-20{
+  margin-right: 5rem;
+}
+
+.mr-10{
+  margin-right: 2.5rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -942,6 +966,14 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[200px\]{
+  height: 200px;
+}
+
+.h-\[100px\]{
+  height: 100px;
 }
 
 .max-h-\[300px\]{
@@ -1030,6 +1062,10 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-\[50px\]{
+  width: 50px;
 }
 
 .max-w-3xl{
@@ -1215,6 +1251,14 @@ video {
   justify-content: space-between;
 }
 
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
 .gap-10{
   gap: 2.5rem;
 }
@@ -1271,6 +1315,12 @@ video {
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .place-self-end{
   place-self: end;
 }
@@ -1297,6 +1347,10 @@ video {
 
 .whitespace-normal{
   white-space: normal;
+}
+
+.text-wrap{
+  text-wrap: wrap;
 }
 
 .text-balance{
@@ -1546,6 +1600,11 @@ video {
   background-clip: padding-box;
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1669,6 +1728,11 @@ video {
   padding-bottom: 5px;
 }
 
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -1741,6 +1805,14 @@ video {
   padding-top: 10px;
 }
 
+.pt-1{
+  padding-top: 0.25rem;
+}
+
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1775,6 +1847,10 @@ video {
 
 .font-sans{
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-poppins{
+  font-family: Poppins, sans-serif;
 }
 
 .text-2xl{
@@ -1869,6 +1945,10 @@ video {
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-extrabold{
+  font-weight: 800;
 }
 
 .uppercase{
@@ -2340,6 +2420,11 @@ body{
   color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\#FFB301\]:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 179 1 / var(--tw-text-opacity));
+}
+
 .hover\:opacity-50:hover{
   opacity: 0.5;
 }
@@ -2449,6 +2534,11 @@ body{
 }
 
 @media (min-width: 640px){
+  .sm\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .sm\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2462,6 +2552,16 @@ body{
   .sm\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .sm\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -2502,6 +2602,46 @@ body{
     display: none;
   }
 
+  .lg\:h-\[50\%\]{
+    height: 50%;
+  }
+
+  .lg\:h-auto{
+    height: auto;
+  }
+
+  .lg\:h-\[100px\]{
+    height: 100px;
+  }
+
+  .lg\:h-\[10px\]{
+    height: 10px;
+  }
+
+  .lg\:h-\[200px\]{
+    height: 200px;
+  }
+
+  .lg\:h-\[50px\]{
+    height: 50px;
+  }
+
+  .lg\:h-\[150px\]{
+    height: 150px;
+  }
+
+  .lg\:h-1\/2{
+    height: 50%;
+  }
+
+  .lg\:h-\[250px\]{
+    height: 250px;
+  }
+
+  .lg\:h-\[300px\]{
+    height: 300px;
+  }
+
   .lg\:w-1\/2{
     width: 50%;
   }
@@ -2528,6 +2668,22 @@ body{
 
   .lg\:w-full{
     width: 100%;
+  }
+
+  .lg\:w-\[50\%\]{
+    width: 50%;
+  }
+
+  .lg\:w-\[100px\]{
+    width: 100px;
+  }
+
+  .lg\:w-6{
+    width: 1.5rem;
+  }
+
+  .lg\:w-5{
+    width: 1.25rem;
   }
 
   .lg\:max-w-full{
@@ -2583,6 +2739,11 @@ body{
     background-position: 30px;
   }
 
+  .lg\:object-cover{
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
   .lg\:p-8{
     padding: 2rem;
   }
@@ -2615,6 +2776,11 @@ body{
   .lg\:py-\[12px\]{
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+
+  .lg\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .lg\:pb-5{
@@ -2666,6 +2832,11 @@ body{
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .lg\:transition{

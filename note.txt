@@ -4,9 +4,15 @@
 -> logistic yusra trasindo.
 -> judul "forwarding agency".
 
+#FFB301 -> goldenrod
+#FAF9FC -> whisper white
+#3B3052 -> dark indigo
+
+
 
 navbar untuk mobile di lebarin
 background navbar waktu open
+after reload page navbarnya gak langsung blur, contoh posisi di about page
 
 home page
 -> main teks di betulin lagi versi mobile
