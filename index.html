@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yusra - Logistic, Document, Information Technology</title>
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -15,6 +16,13 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: background 0.3s ease, box-shadow 0.3s ease;
       } 
+
+      .navv{
+        background: rgba(0, 0, 0, 0.8); 
+        backdrop-filter: blur(7px); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
 
       .border-b-hidden {
         border-bottom: none;
@@ -72,6 +80,7 @@
       .swiper{
         width: 100%;
         height: 100%;
+
       }
 
       .swiper-slide{
@@ -120,11 +129,11 @@
         .navigation{
           position: absolute;
           width: 100%;
-          top: 45px;
+          top: 50px;
           left: 0;
-          background: rgba(0, 0, 0, 0.4); 
+          background: rgba(0, 0, 0, 0.8); 
           backdrop-filter: blur(7px); 
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
           transition: background 0.3s ease, box-shadow 0.3s ease;
         } 
         .swiper:nth-of-type(1){
@@ -133,9 +142,9 @@
         .swiper:nth-of-type(2){
           height: 500px;
         }
-        .swiper-button-next, .swiper-button-prev{
+        /*.swiper-button-next, .swiper-button-prev{
           display: none;
-        }
+        }*/
       }
     </style>
 </head>
@@ -143,7 +152,7 @@
 <body class="scroll-bar m-0 p-0"><!--  box-border -->
   
   <header class="head-nav fixed top-0 left-0 w-full px-[20px] lg:px-[100px] transition duration-300 ease-in-out z-[998] bg-transparent border-b-hidden">
-    <nav class="nav-child border-b-[1px] mt-2 lg:py-[0px] flex justify-between items-center transition duration-500 ease-in-out">
+    <nav class="nav-child border-b-[1px] py-1 mt-2 lg:py-[0px] flex justify-between items-center transition duration-500 ease-in-out">
       <a href="#home" class="brand flex items-center text-[#fff] font-bold text-2xl uppercase cursor-pointer">
         <img src="./assets/icons/logo.svg" alt="logo" class="w-8 h-auto lg:w-11">
         <h1 class="text-[#D9B01C] ml-2 text-lg tracking-[0.2em] lg:text-2xl">Yusra</h1>
@@ -215,8 +224,8 @@
               Service prides itself in being a comprehensive one-stop shipping solutions provider – offering an extensive and innovative suite of 
               services including freight forwarding, chartering, trans-shipment, pick and pack, project logistics and more. We believe in being part of a value added supply chain to achieve total cost savings for companies.
             </p>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="img-about relative flex items-center p-7 lg:p-8">
-              <div class="aksen absolute h-full w-[15%] left-0 bg-[#D9B01C] rounded-xl"></div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="img-about relative flex items-center p-7  lg:p-8">
+              <div class="aksen absolute h-full w-[25%] sm:w-[15%] left-0 bg-[#D9B01C] rounded-xl"></div>
               <img src="./assets/img/ship.webp" alt="" class="w-full h-auto rounded-xl drop-shadow-lg">
             </div>
           </div>
@@ -254,7 +263,7 @@
               Unlock the power of seamless document management with us! Our agency transforms your paperwork chaos into organized clarity. From legal contracts to business paperwork, we handle it all with precision and care. Let us simplify your documentation so you can focus on what truly matters. Experience the ease of professional document handling and never miss a detail again. Join our community of satisfied clients today and elevate your document game!  
             </p>
             <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
-              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button" onclick="window.location.href='bintang-jasa.html';">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
+              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button" onclick="window.location.href='services/bintang-jasa.html';">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
             </div>
           </div>
         </div>
@@ -268,7 +277,7 @@
               Transform your supply chain with our cutting-edge logistics solutions! We streamline your operations from warehousing to delivery, ensuring efficiency and reliability every step of the way. Trust us to handle your logistics needs so you can focus on growing your business. Experience hassle-free shipping and superior service with our dedicated team. Join us today and let’s drive your success forward together!  
             </p>
             <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
-              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button" onclick="window.location.href='transindo.html';">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
+              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button" onclick="window.location.href='services/transindo.html';">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
             </div>          
           </div>
         </div>
@@ -282,7 +291,7 @@
               Elevate your business with cutting-edge Information Technology solutions! Our expert team delivers innovative IT services that drive efficiency and unlock new possibilities. From seamless integrations to robust security, we tailor solutions to meet your unique needs. Embrace the future with technology that empowers your growth and enhances your operations. Partner with us today and transform your IT challenges into opportunities for success!  
             </p>
             <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
-              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button" onclick="window.location.href='bintang-jasa.html';">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
+              <button class="button-view bg-[#f5f5f5] rounded-[10px] mt-10 py-[10px] px-[25px] text-center text-[#31302D] text-[15px] font-medium fade-in-bottom" type="button" onclick="window.location.href='services/bintang-jasa.html';">View More <i class="fa-solid fa-arrow-up ml-1 rotate-45"></i></button>
             </div>          
           </div>
         </div>
@@ -352,18 +361,18 @@
               <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
                 <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
                 <p class="text-sm">Base Move All Equipment from KTU Sekupang Yars to Bluerock Yard Batu Ampar</p>
-                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium" type="button" onclick="window.location.href='projects/project-compass-energy.html';">View More</button>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
-              <img src="./assets/img/4.png" alt="" class="w-full h-auto">
+              <img src="./assets/img/img-project-2.png" alt="" class="w-full h-auto">
               <div class="absolute inset-0 bg-black opacity-10"></div>
               <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
                 <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
                 <p class="text-sm">Shipment Black Mamba from Africa to Singapore, Singapore to Batam, Year 2021</p>
-                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium" type="button" onclick="window.location.href='projects/project-shipment.html';">View More</button>
               </div>
             </div>
           </div>
@@ -374,25 +383,26 @@
               <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
                 <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Documents Handling</h2>
                 <p class="text-sm">jetty special terminal permit processing PT. Caterpillar</p>
-                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium" type="button" onclick="window.location.href='projects/project-document-handling.html';">View More</button>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="relative text-white w-[300px] max-h-[400px] group cursor-pointer">
-              <img src="./assets/img/img-project-2.png" alt="" class="w-full h-auto">
+              <img src="./assets/img/4.png" alt="" class="w-full h-auto">
               <div class="absolute inset-0 bg-black opacity-10"></div>
               <div class="absolute -bottom-10 text-white px-3 py-2 bg-black lg:bottom-0 lg:transition-all lg:duration-500 lg:translate-y-1/2 group-hover:translate-y-0">
                 <h2 class="font-medium text-[30px] mb-2 font-bebas tracking-wide">Logistic</h2>
                 <p class="text-sm">Shipment galvanize bamboo wooden beam from India to Batam ,and Batam to Bogor – PT Ecomat Pro</p>
-                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium">View More</button>
+                <button class="button-view bg-white rounded-[50px] mt-[10px] py-[5px] px-[15px] text-center text-[#262626] text-[14px] font-medium" type="button" onclick="window.location.href='projects/project-shipment-bamboo.html';">View More</button>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
     </div>
   </section>
@@ -473,15 +483,15 @@
   <aside id="popup_container" class="fixed bottom-20 lg:bottom-24 right-5 lg:right-10 z-[999] hidden">
       <div class="grid">
           <div class="bg-white text-black text-sm font-semibold font-sans tracking-wide rounded-lg py-2 shadow-cht-container">
-              <a href="mailto:rubenkece2@gmail.com" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+              <a href="mailto:ayu@yusra-bintang.com" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
                   <img src="assets/icons/gmail-cht.png" alt="email" class="w-[30px] lg:w-[40px] h-auto">
                   <span class="">Email</span>
               </a>
-              <a href="https://www.instagram.com/rubenbkr_/" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+              <a href="https://www.instagram.com/yusra_batam" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
                   <img src="assets/icons/instagram-cht.png" alt="instagram" class="w-[30px] lg:w-[40px] h-auto">
                   <span class="">Instagram</span>
               </a>
-              <a href="https://api.whatsapp.com/send?phone=62811388874" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
+              <a href="https://api.whatsapp.com/send?phone=6281276661265" target="_blank" class="flex items-center gap-2 pr-16 lg:pr-24 pl-5 py-2 hover:bg-slate-400 cursor-pointer">
                   <img src="assets/icons/whatsapp-cht.png" alt="whatsapp" class="w-[30px] lg:w-[40px] h-auto">
                   <span class="">Whatsapp</span>
               </a>
@@ -502,9 +512,9 @@
         <div class="flex justify-between mt-5">
           <div class="flex flex-col gap-[2px] text-[#d4d4d4] tracking-wide">
             <h2 class="text-white font-bold text-lg">Services</h2>
-            <a class="text-[14px] hover:text-[#FFDD43]" href="#home">Documents Agency</a>
-            <a class="text-[14px] hover:text-[#FFDD43]" href="#about">Logistic</a>
-            <a class="text-[14px] hover:text-[#FFDD43]" href="#services">Information Technology</a>
+            <a class="text-[14px] hover:text-[#FFDD43]" href="bintang-jasa.html">Documents Agency</a>
+            <a class="text-[14px] hover:text-[#FFDD43]" href="transindo.html">Logistic</a>
+            <a class="text-[14px] hover:text-[#FFDD43]" href="bintang-jasa.html">Information Technology</a>
           </div>
           <div class="text-[#d4d4d4]">
             <h2 class="text-white font-bold text-lg">Location</h2>
@@ -512,9 +522,9 @@
           </div>
         </div>
         <div class="flex justify-center gap-6 my-5 items-center">
-          <a href="" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-brands fa-instagram fa-xl"></i></a>
-          <a href="#" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-regular fa-envelope fa-xl"></i></a>
-          <a href="#" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+          <a href="https://www.instagram.com/yusra_batam" target="_blank" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-brands fa-instagram fa-xl"></i></a>
+          <a href="mailto:ayu@yusra-bintang.com" target="_blank" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-regular fa-envelope fa-xl"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=6281276661265" target="_blank" class="rounded-full hover:text-[#FFDD43] text-[#c3c6d1]"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
         </div>
         <div class="text-center text-[#c3c6d1] font-light tracking-wider text-xs">
             &copy; 2024 Yusra Group. All rights reserved.
@@ -530,7 +540,7 @@
     AOS.init();
   </script>
   <script src="js/script.js"></script>
-  <script src="js.js"></script>
+  <script src="js/js.js"></script>
   <script>
     var swiperProject = new Swiper('.project-swiper', {
       slidesPerView: 3,
@@ -540,22 +550,22 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      //pagination: {
+      //  el: '.swiper-pagination',
+      //  clickable: true,
+      //},
       breakpoints: {
         1024: {
           slidesPerView: 3,
           spaceBetween:1,
-          direction: 'horizontal',
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween:10,
         },
         360: {
-          direction: 'vertical',
           slidesPerView: 1,
           spaceBetween:10,
-          scrollbar:{
-            el: '.swiper-scrollbar',
-            hide: true,
-          },
-          mousewheel:true,
-          //loop:false,
         },
       },
     });
@@ -578,22 +588,6 @@
           }
         }
       })
-    function handleResize() {
-      if (window.innerWidth >= 1024) {
-          if (swiperclient) {
-             swiperclient.destroy(true, true);
-              swiperclient = null;
-          }
-      } else {
-          if (!swiperclient) {
-              swiperClient();
-          }
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    //handleResize();
     
     var swiperReview = new Swiper('.review-swiper',{
       slidesPerView: 1,
